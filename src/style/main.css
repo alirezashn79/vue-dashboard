@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #243a73;
+  --color-secondary: #f5f6fa;
+  --color-dark: #202020;
+  --color-danger: #ff0000;
+  --color-success: #1ad55a;
+  --color-warning: #f2a102;
+  --color-danger2: #ff9384;
+  --color-blue: #0e5fd9;
+  --font-dana: Dana;
+  --font-vazir: Vazir;
+}
+
+@layer base {
+  @font-face {
+    font-family: Dana;
+    src: url('../assets/fonts/dana/DanaFaNum-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Dana;
+    src: url('../assets/fonts/dana/DanaFaNum-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Dana;
+    src: url('../assets/fonts/dana/DanaFaNum-DemiBold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Vazir;
+    src: url('../assets/fonts/vazir/Vazirmatn-FD-Light.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Vazir;
+    src: url('../assets/fonts/vazir/Vazirmatn-FD-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Vazir;
+    src: url('../assets/fonts/vazir/Vazirmatn-FD-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Vazir;
+    src: url('../assets/fonts/vazir/Vazirmatn-FD-SemiBold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Vazir;
+    src: url('../assets/fonts/vazir/Vazirmatn-FD-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  body {
+    font-family: Vazir, sans-serif;
+    @apply bg-secondary text-sm text-dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply p-3 rounded-xl relative font-bold cursor-pointer transition-all flex items-center justify-center;
+  }
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-transparent border border-primary hover:text-primary;
+  }
+
+  .btn-primary-opacity {
+    @apply bg-primary/10 border border-primary/10 text-primary font-light;
+  }
+
+  .input {
+    @apply bg-secondary rounded-lg px-4 h-12 w-full font-light;
+  }
+}
