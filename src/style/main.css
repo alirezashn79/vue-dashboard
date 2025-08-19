@@ -74,6 +74,76 @@
     font-family: Vazir, sans-serif;
     @apply bg-secondary text-sm text-dark;
   }
+  button {
+    cursor: pointer;
+  }
+
+  /* کلاس برای پنهان کردن اسکرول بار در همه مرورگرها */
+  .hide-scrollbar {
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* Internet Explorer and Edge */
+    -ms-overflow-style: none;
+  }
+
+  /* WebKit browsers (Chrome, Safari, Edge) */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* کلاس برای اسکرول بار سفارشی با رنگ #243a73 و عرض کم */
+  .custom-scrollbar {
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #243a73 #f1f1f1;
+  }
+
+  /* WebKit browsers (Chrome, Safari, Edge) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px; /* عرض اسکرول بار عمودی */
+    height: 6px; /* عرض اسکرول بار افقی */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* رنگ پس‌زمینه */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #243a73; /* رنگ دسته اسکرول بار */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #1a2d5a; /* رنگ تیره‌تر هنگام hover */
+  }
+
+  /* کلاس اختیاری - اسکرول بار باریک‌تر */
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #243a73 #f1f1f1;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #243a73;
+    border-radius: 5px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #1a2d5a;
+  }
 }
 
 @layer components {
@@ -82,6 +152,9 @@
   }
   .btn-primary {
     @apply bg-primary text-white hover:bg-transparent border border-primary hover:text-primary;
+  }
+  .btn-primary-outline {
+    @apply bg-transparent text-primary hover:bg-primary border border-primary hover:text-white;
   }
 
   .btn-primary-opacity {

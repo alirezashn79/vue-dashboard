@@ -2,6 +2,8 @@ import SignIn from '@/components/auth/sign-in.vue'
 import SignUp from '@/components/auth/sign-up.vue'
 import VerifyOtp from '@/components/auth/verify-otp.vue'
 import AuthLayout from '@/layouts/auth-layout.vue'
+import RootLayout from '@/layouts/root-layout.vue'
+import HomeView from '@/views/home-view.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -22,6 +24,16 @@ const router = createRouter({
         {
           path: 'verify-otp',
           component: VerifyOtp,
+        },
+      ],
+    },
+    {
+      path: '/',
+      component: RootLayout,
+      children: [
+        {
+          path: '',
+          component: HomeView,
         },
       ],
     },
