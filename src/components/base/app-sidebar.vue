@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useSidebarStore } from '@/stores/sidebar'
 import { Banknote, CalendarCheck, CalendarRange, Grid2x2, Home, ListChecks } from 'lucide-vue-next'
-
+import LogoImage from '@/assets/images/Logo.png'
 const sidebarStore = useSidebarStore()
 </script>
 
@@ -12,7 +12,7 @@ const sidebarStore = useSidebarStore()
   >
     <div class="overflow-y-auto flex flex-col h-full px-3">
       <div class="mt-3">
-        <img src="../../assets/images/Logo.png" alt="logo" class="h-14 mx-auto" />
+        <img :src="LogoImage" alt="logo" class="h-14 mx-auto" />
       </div>
 
       <ul class="mt-5 space-y-3">

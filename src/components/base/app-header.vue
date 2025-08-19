@@ -3,6 +3,7 @@ import { useSidebarStore } from '@/stores/sidebar'
 import { ChevronDown, LogOut, Menu, Search, User2 } from 'lucide-vue-next'
 import AppDrawer from '../shared/app-drawer.vue'
 import { ref } from 'vue'
+import BellImage from '@/assets/images/alert-icon.png'
 
 const sidebarStore = useSidebarStore()
 const isOpenNotif = ref(false)
@@ -32,7 +33,7 @@ const closeNotif = () => (isOpenNotif.value = false)
 
       <div class="flex items-center gap-3.5">
         <button @click="openNotif" class="btn p-0 relative bell">
-          <img src="../../assets/images/alert-icon.png" alt="alert" class="size-5" />
+          <img :src="BellImage" alt="alert" class="size-5" />
           <div
             class="absolute -top-2 -start-2 size-4 rounded-full bg-warning text-xs text-white font-sans flex items-center justify-center"
           >

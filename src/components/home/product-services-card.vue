@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { PlusCircle } from 'lucide-vue-next'
 import AppCard from '../shared/app-card.vue'
+import ProductImage from '@/assets/images/product.jpg'
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import AppCard from '../shared/app-card.vue'
         <div class="bg-secondary rounded-2xl p-2 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <img
-              src="../../assets/images/product.jpg"
+              :src="ProductImage"
               alt="product"
               class="h-[52px] w-[54px] rounded-xl object-cover"
             />
@@ -31,7 +32,7 @@ import AppCard from '../shared/app-card.vue'
         <div class="rounded-2xl p-2 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <img
-              src="../../assets/images/product.jpg"
+              :src="ProductImage"
               alt="product"
               class="h-[52px] w-[54px] rounded-xl object-cover"
             />
@@ -50,7 +51,7 @@ import AppCard from '../shared/app-card.vue'
         <div class="rounded-2xl p-2 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <img
-              src="../../assets/images/product.jpg"
+              :src="ProductImage"
               alt="product"
               class="h-[52px] w-[54px] rounded-xl object-cover"
             />
@@ -69,7 +70,7 @@ import AppCard from '../shared/app-card.vue'
         <div class="rounded-2xl p-2 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <img
-              src="../../assets/images/product.jpg"
+              :src="ProductImage"
               alt="product"
               class="h-[52px] w-[54px] rounded-xl object-cover"
             />
@@ -88,7 +89,7 @@ import AppCard from '../shared/app-card.vue'
         <div class="rounded-2xl p-2 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <img
-              src="../../assets/images/product.jpg"
+              :src="ProductImage"
               alt="product"
               class="h-[52px] w-[54px] rounded-xl object-cover"
             />
