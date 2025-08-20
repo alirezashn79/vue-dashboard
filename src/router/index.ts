@@ -3,6 +3,7 @@ import SignUp from '@/components/auth/sign-up.vue'
 import VerifyOtp from '@/components/auth/verify-otp.vue'
 import AuthLayout from '@/layouts/auth-layout.vue'
 import RootLayout from '@/layouts/root-layout.vue'
+import BusinessesView from '@/views/businesses-view.vue'
 import HomeView from '@/views/home-view.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -34,6 +35,10 @@ const router = createRouter({
         {
           path: '',
           component: HomeView,
+        },
+        {
+          path: 'businesses',
+          component: BusinessesView,
         },
       ],
     },

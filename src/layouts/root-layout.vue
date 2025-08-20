@@ -8,7 +8,7 @@ import AppSidebar from '@/components/base/app-sidebar.vue'
     <AppSidebar />
     <main class="w-full">
       <AppHeader />
-      <div class="size-full overflow-y-auto thin-scrollbar px-6 py-4 pb-24">
+      <div class="size-full overflow-y-auto thin-scrollbar px-6 py-4 pb-[86px]">
         <RouterView />
       </div>
     </main>

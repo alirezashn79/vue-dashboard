@@ -4,11 +4,15 @@
   --color-primary: #243a73;
   --color-secondary: #f5f6fa;
   --color-dark: #202020;
+  --color-dark-2: #000000;
   --color-danger: #ff0000;
+  --color-danger-2: #ef3826;
   --color-success: #1ad55a;
   --color-warning: #f2a102;
+  --color-warning-2: #dc950b;
   --color-danger2: #ff9384;
   --color-blue: #0e5fd9;
+  --color-blue-2: #4880ff;
   --font-dana: Dana;
   --font-vazir: Vazir;
 }
@@ -76,6 +80,15 @@
   }
   button {
     cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-dark-2;
   }
 
   /* کلاس برای پنهان کردن اسکرول بار در همه مرورگرها */
@@ -148,10 +161,10 @@
 
 @layer components {
   .btn {
-    @apply p-3 rounded-xl relative font-bold cursor-pointer transition-all flex items-center justify-center;
+    @apply p-3 rounded-xl relative font-bold transition-all flex items-center justify-center;
   }
   .btn-primary {
-    @apply bg-primary text-white hover:bg-transparent border border-primary hover:text-primary;
+    @apply bg-primary text-white  border border-primary;
   }
   .btn-primary-outline {
     @apply bg-transparent text-primary hover:bg-primary border border-primary hover:text-white;
@@ -159,6 +172,16 @@
 
   .btn-primary-opacity {
     @apply bg-primary/10 border border-primary/10 text-primary font-light;
+  }
+  .btn-success {
+    @apply bg-success text-white hover:bg-transparent border border-success hover:text-success;
+  }
+  .btn-success-outline {
+    @apply bg-transparent text-success hover:bg-success border border-success hover:text-white;
+  }
+
+  .btn-success-opacity {
+    @apply bg-success/10 border border-success/10 text-success font-light;
   }
 
   .input {

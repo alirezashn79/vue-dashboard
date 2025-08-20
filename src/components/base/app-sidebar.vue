@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import LogoImage from '@/assets/images/Logo.png'
 import { useSidebarStore } from '@/stores/sidebar'
 import { Banknote, CalendarCheck, CalendarRange, Grid2x2, Home, ListChecks } from 'lucide-vue-next'
-import LogoImage from '@/assets/images/Logo.png'
+import { useRoute } from 'vue-router'
 const sidebarStore = useSidebarStore()
+
+const route = useRoute()
+
+const isActive = (path: string) => {
+  return route.path === path
+}
 </script>
 
 <template>
@@ -17,16 +24,16 @@ const sidebarStore = useSidebarStore()
 
       <ul class="mt-5 space-y-3">
         <li>
-          <RouterLink to="/" class="link active">
+          <RouterLink to="/" class="link" :class="{ active: isActive('/') }">
             <Home />
 
             <span :class="!sidebarStore.isOpen && 'hidden'"> داشبورد </span>
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/" class="link">
+          <RouterLink to="/businesses" class="link" :class="{ active: isActive('/businesses') }">
             <ListChecks />
-            <span :class="!sidebarStore.isOpen && 'hidden'"> خرید و هزینه </span>
+            <span :class="!sidebarStore.isOpen && 'hidden'"> کسب و کار ها </span>
           </RouterLink>
         </li>
         <li>
