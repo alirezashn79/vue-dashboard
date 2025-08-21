@@ -40,7 +40,6 @@
           <component v-if="businessStep.currentStep" :is="businessStep.currentStep.component" />
         </div>
 
-        <!-- Navigation Buttons -->
         <div class="mt-8 flex items-center">
           <button
             v-if="!businessStep.isFirstStep"

@@ -185,6 +185,6 @@
   }
 
   .input {
-    @apply bg-secondary rounded-lg px-4 h-12 w-full font-light;
+    @apply bg-secondary rounded-lg px-4 h-12 w-full font-light outline-secondary outline;
   }
 }

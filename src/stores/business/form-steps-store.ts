@@ -1,9 +1,9 @@
+import FormStepFour from '@/components/business/form-step-four.vue'
+import FormStepOne from '@/components/business/form-step-one.vue'
+import FormStepThree from '@/components/business/form-step-three.vue'
+import FormStepTwo from '@/components/business/form-step-two.vue'
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
-import FourForm from './four-form.vue'
-import OneForm from './one-form.vue'
-import ThreeForm from './three-form.vue'
-import TwoForm from './two-form.vue'
 
 export const useBusinessStep = defineStore('businessStep', () => {
   const currentStepNumber = ref(1)
@@ -13,25 +13,25 @@ export const useBusinessStep = defineStore('businessStep', () => {
     {
       step: 1,
       title: 'افزودن کسب و کار',
-      component: OneForm,
+      component: FormStepOne,
       hasNext: true,
     },
     {
       step: 2,
       title: 'اقتصادی',
-      component: TwoForm,
+      component: FormStepTwo,
       hasNext: true,
     },
     {
       step: 3,
       title: 'سال مالی',
-      component: ThreeForm,
+      component: FormStepThree,
       hasNext: true,
     },
     {
       step: 4,
       title: 'تماس',
-      component: FourForm,
+      component: FormStepFour,
       hasNext: false,
     },
   ]
